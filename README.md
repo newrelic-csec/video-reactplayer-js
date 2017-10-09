@@ -13,12 +13,12 @@ Load **scripts** inside `dist` folder into your page.
 > If `dist` folder is not included, run `npm i && npm run build` to build it.
 
 ### Important note about events
-Unfortunatelly, ReactPlayer does not provide listenable events, instead, it provides unique callback props such as `onPlay`, `onStart`, etc. This implementation does not allow new relic's instrumentation to register to events by themself, so we have to delegate that responsability to your App code.
+Unfortunately, ReactPlayer does not provide listenable events, instead, it provides unique callback props such as `onPlay`, `onStart`, etc. This implementation does not allow new relic's instrumentation to register to events by themselves, so we have to delegate that responsibility to your App code.
 
 For your convenience, we have included a React component in [samples/NewRelicReactPlayer.js](./samples/NewRelicReactPlayer.js) that you can use as a boilerplate to build your app upon.
 
 ## Limitations
-ReactPlayer is a broad solution that leverages different player API into a common one. Because of that, we can only provide a shallow implementation for the basic functionalities. In order to allow full instrumentation, consider tackling every video provider by itself.
+ReactPlayer is a broad solution that leverages different player API into a common one. Because of that, we can only provide a shallow implementation for the basic functionalities. In order to allow full instrumentation, consider instrumenting every video provider by itself.
 
 ### Seeks
 ReactPlayer API does not fully translate onSeek events for all video providers, those untracked seeks will be reported `as buffers`.
