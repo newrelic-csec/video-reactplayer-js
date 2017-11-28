@@ -1,7 +1,7 @@
 import * as nrvideo from 'newrelic-video-core'
 import {version} from '../package.json'
 
-export default class ReactPlayerTracker extends nrvideo.Tracker {
+export default class ReactPlayerTracker extends nrvideo.VideoTracker {
   getTrackerName () {
     return 'react-player'
   }
